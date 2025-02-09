@@ -18,14 +18,14 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/oskarirauta/swift-concurrency-extras", from: "1.3.2"),
-    .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.2.2"),
+    .package(url: "https://github.com/oskarirauta/swift-issue-reporting", from: "1.5.2"),
   ],
   targets: [
     .target(
       name: "CombineSchedulers",
       dependencies: [
         .product(name: "ConcurrencyExtras", package: "swift-concurrency-extras"),
-        .product(name: "IssueReporting", package: "xctest-dynamic-overlay"),
+        .product(name: "IssueReporting", package: "swift-issue-reporting"),
       ]
     ),
     .testTarget(
